@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Cyclist Assistant</string>
+    <string name="button">ADD NEW SERVICE</string>
+    <string name="button2">VIEW YOUR SERVICES</string>
+    <string name="button3">FIND THE NEAREST SERVICE</string>
+
+    <string name="textView">DATE</string>
+    <string name="textView2">DISTANCE</string>
+    <string name="textView3">PROPULSION SYSTEM</string>
+    <string name="textView4">SUSPENSION SYSTEM</string>
+    <string name="textView5">BRAKING SYSTEM</string>
+    <string name="textView6">WHEELS</string>
+    <string name="textView7">OTHER</string>
+    <string name="textView8">COST</string>
+
+
+</resources>
