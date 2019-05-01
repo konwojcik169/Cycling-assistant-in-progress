@@ -33,7 +33,7 @@ public class UpdatingServices extends Activity {
 
         myDb = new DBHelper(this);
 
-        String bId, bDate, bDistance, bPropulsion, bSuspension, bBraking, bWheels, bOther, bCost;
+        final String bId, bDate, bDistance, bPropulsion, bSuspension, bBraking, bWheels, bOther, bCost;
 
 
         et12_date = findViewById(R.id.editText12);
@@ -71,14 +71,14 @@ public class UpdatingServices extends Activity {
             res.moveToPosition(ViewingServices.itemSelectedUpdate);
 
             bufId.append(res.getString(0));
-            bufDate.append("Date: " + res.getString(1));
-            bufDistance.append("Distance:\n" + res.getString(2) + " km");
-            bufPropulsion.append("Propulsion:\n" + res.getString(3) );
-            bufSuspension.append("Suspension/frame:\n" + res.getString(4));
-            bufBraking.append("Braking system:\n" + res.getString(5));
-            bufWheels.append("Wheels:\n" + res.getString(6));
-            bufOther.append("Other:\n" + res.getString(7));
-            bufCost.append("Cost:\n" + res.getString(8) + " PLN\n");
+            bufDate.append(res.getString(1));
+            bufDistance.append(res.getString(2));
+            bufPropulsion.append(res.getString(3));
+            bufSuspension.append(res.getString(4));
+            bufBraking.append(res.getString(5));
+            bufWheels.append(res.getString(6));
+            bufOther.append(res.getString(7));
+            bufCost.append(res.getString(8));
 
             bId = bufId.toString();
             bDate = bufDate.toString();
@@ -122,7 +122,7 @@ public class UpdatingServices extends Activity {
             @Override
             public void onClick(View v) {
 
-                boolean isUpdate = myDb.updateData("14", et12_date.getText().toString(),
+                boolean isUpdate = myDb.updateData(bId, et12_date.getText().toString(),
                         et13_distance.getText().toString(), et14_propulsion.getText().toString(),
                         et15_suspension.getText().toString(), et16_braking.getText().toString(),
                         et17_wheels.getText().toString(), et18_other.getText().toString(),
@@ -139,6 +139,7 @@ public class UpdatingServices extends Activity {
             }
         });
 
+        bufId.delete(0,20);
         ViewingServices.itemSelectedUpdate = 0;
     }
 }
