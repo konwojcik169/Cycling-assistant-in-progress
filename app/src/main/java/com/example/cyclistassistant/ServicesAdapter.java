@@ -30,6 +30,9 @@ public class ServicesAdapter extends ArrayAdapter<Services> {
         ImageView iv = listItem.findViewById(R.id.imageView11);
         iv.setImageResource(currentService.getFacePicture());
 
+        TextView tv11 = listItem.findViewById(R.id.textView11);
+        tv11.setText(currentService.getId());
+
         TextView tv1 = listItem.findViewById(R.id.textView);
         tv1.setText(currentService.getDate());
         TextView tv2 = listItem.findViewById(R.id.textView2);

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -59,7 +60,7 @@ public class ViewingServices extends Activity {
        StringBuffer bufCost = new StringBuffer();
 
      while (res.moveToNext()){
-            bufId.append("Id:\n" + res.getString(0)+ "\n");
+            bufId.append(res.getString(0));
             bufDate.append("Date: " + res.getString(1));
             bufDistance.append("Distance:\n" + res.getString(2) + " km");
             bufPropulsion.append("Propulsion:\n" + res.getString(3) );
@@ -69,6 +70,7 @@ public class ViewingServices extends Activity {
             bufOther.append("Other:\n" + res.getString(7));
             bufCost.append("Cost:\n" + res.getString(8) + " PLN\n");
 
+             bId = bufId.toString();
              bDate = bufDate.toString();
              bDistance = bufDistance.toString();
              bPropulsion = bufPropulsion.toString();
@@ -78,7 +80,7 @@ public class ViewingServices extends Activity {
              bOther = bufOther.toString();
              bCost = bufCost.toString();
 
-            servicesList.add(new Services(R.drawable.baseline_calendar_today_black_18dp, bDate,
+            servicesList.add(new Services(R.drawable.baseline_calendar_today_black_18dp, bId, bDate,
                     bDistance, bPropulsion, bSuspension, bBraking, bWheels, bOther, bCost));
 
             bufId.delete(0,20);
@@ -104,7 +106,7 @@ public class ViewingServices extends Activity {
                         itemSelected = position;
                         isSelected = true;
                         listView.setSelector(android.R.color.holo_orange_dark);
-
+//
 //                        if(position == 0) {
 //                            Toast.makeText(getApplicationContext(), "You chose Chuck Norris", Toast.LENGTH_LONG).show();
 //                        } else if (position == 1) {
@@ -117,51 +119,35 @@ public class ViewingServices extends Activity {
                 }
         );
 
-//        b6_deleteService.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(isSelected) {
-//                    servicesList.remove(itemSelected);
-//                    sAdapter.notifyDataSetChanged();
-//
-//                    Integer deletedRows = myDb.deleteDataDH("7");
-//                    //String.valueOf(itemSelected)
-//
-//                    if(deletedRows > 0){
-//                        Toast.makeText(ViewingServices.this, "Data deleted",
-//                                Toast.LENGTH_SHORT).show();
-//                    }
-//                    else {
-//                        Toast.makeText(ViewingServices.this, "Data not deleted!!!",
-//                                Toast.LENGTH_SHORT).show();
-//                    }
-//
-//                } else {
-//                    Toast.makeText(ViewingServices.this, "Select service to be deleted",
-//                            Toast.LENGTH_LONG).show();
-//                }
-//                    itemSelected = 0;
-//                    isSelected = false;
-//                    listView.setSelector(android.R.color.transparent);
-//            }
-//        });
+        b6_deleteService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isSelected) {
+                    servicesList.remove(itemSelected);
+                    sAdapter.notifyDataSetChanged();
+                    TextView tv11 = listView.findViewById(R.id.textView11);
 
-//        public void deleteData(){
-//            b4.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Integer deletedRows = myDb.deleteDataDH(et4.getText().toString());
-//                    if(deletedRows > 0){
-//                        Toast.makeText(MainActivity.this, "Data deleted",
-//                                Toast.LENGTH_SHORT).show();
-//                    }
-//                    else {
-//                        Toast.makeText(MainActivity.this, "Data not deleted!!!",
-//                                Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//            });
-//        }
+                    Integer deletedRows = myDb.deleteRowOfDB(tv11.getText().toString());
+
+                    if(deletedRows > 0){
+                        Toast.makeText(ViewingServices.this, "Data deleted",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(ViewingServices.this, "Data not deleted!!!" + tv11,
+                                Toast.LENGTH_LONG).show();
+                    }
+
+                } else {
+                    Toast.makeText(ViewingServices.this, "Select service to be deleted",
+                            Toast.LENGTH_LONG).show();
+                }
+                    itemSelected = 0;
+                    isSelected = false;
+                    listView.setSelector(android.R.color.transparent);
+            }
+        });
+
     }
 
 

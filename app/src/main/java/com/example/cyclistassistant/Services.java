@@ -2,12 +2,13 @@ package com.example.cyclistassistant;
 
 public class Services {
     private int datePicture;
-    private String date, distance, propulsionService, suspensionService, brakingService,
+    private String id, date, distance, propulsionService, suspensionService, brakingService,
         wheelsService, otherRepairs, cost;
 
-    public Services(int facePicture, String date, String distance, String propulsionService, String suspensionService,
+    public Services(int facePicture, String id, String date, String distance, String propulsionService, String suspensionService,
         String brakingService, String wheelsService, String otherRepairs, String cost) {
         this.datePicture = facePicture;
+        this.id = id;
         this.date = date;
         this.distance = distance;
         this.propulsionService = propulsionService;
@@ -25,6 +26,8 @@ public class Services {
     public int getFacePicture() {
         return datePicture;
     }
+
+    public String getId(){ return id; }
 
     public String getDate() {
         return date;
