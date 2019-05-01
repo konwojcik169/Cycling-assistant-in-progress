@@ -51,15 +51,15 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     StringBuffer buffer = new StringBuffer();
                     while (res.moveToNext()) {
-                        buffer.append("Id :" + res.getString(0) + "\n");
-                        buffer.append("Date :" + res.getString(1) + "\n");
-                        buffer.append("Distance :" + res.getString(2) + "\n");
-                        buffer.append("Propulsion :" + res.getString(3) + "\n");
-                        buffer.append("Suspension/frame :" + res.getString(4) + "\n");
-                        buffer.append("Braking system :" + res.getString(5) + "\n");
-                        buffer.append("Wheels :" + res.getString(6) + "\n");
-                        buffer.append("Other :" + res.getString(7) + "\n");
-                        buffer.append("Cost :" + res.getString(8) + "\n\n");
+                        buffer.append("Id: " + res.getString(0) + "\n");
+                        buffer.append("Date: " + res.getString(1) + "\n");
+                        buffer.append("Distance: " + res.getString(2) + "\n");
+                        buffer.append("Propulsion: " + res.getString(3) + "\n");
+                        buffer.append("Suspension/frame: " + res.getString(4) + "\n");
+                        buffer.append("Braking system: " + res.getString(5) + "\n");
+                        buffer.append("Wheels: " + res.getString(6) + "\n");
+                        buffer.append("Other: " + res.getString(7) + "\n");
+                        buffer.append("Cost: " + res.getString(8) + "\n\n");
                     }
 
                     // show all data

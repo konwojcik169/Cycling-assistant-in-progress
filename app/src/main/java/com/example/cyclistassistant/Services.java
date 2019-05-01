@@ -1,13 +1,13 @@
 package com.example.cyclistassistant;
 
 public class Services {
-//    private int facePicture;
+    private int datePicture;
     private String date, distance, propulsionService, suspensionService, brakingService,
         wheelsService, otherRepairs, cost;
 
-    public Services(String date, String distance, String propulsionService, String suspensionService,
+    public Services(int facePicture, String date, String distance, String propulsionService, String suspensionService,
         String brakingService, String wheelsService, String otherRepairs, String cost) {
-//        this.facePicture = facePicture;
+        this.datePicture = facePicture;
         this.date = date;
         this.distance = distance;
         this.propulsionService = propulsionService;
@@ -21,6 +21,10 @@ public class Services {
 //    public int getFacePicture() {
 //        return facePicture;
 //    }
+
+    public int getFacePicture() {
+        return datePicture;
+    }
 
     public String getDate() {
         return date;

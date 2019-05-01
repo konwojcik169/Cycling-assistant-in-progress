@@ -26,6 +26,10 @@ public class ServicesAdapter extends ArrayAdapter<Services> {
         if(listItem == null)
             listItem = LayoutInflater.from(myContext).inflate(R.layout.list_services, parent, false);
         Services currentService = servicesList.get(position);
+
+        ImageView iv = listItem.findViewById(R.id.imageView11);
+        iv.setImageResource(currentService.getFacePicture());
+
         TextView tv1 = listItem.findViewById(R.id.textView);
         tv1.setText(currentService.getDate());
         TextView tv2 = listItem.findViewById(R.id.textView2);

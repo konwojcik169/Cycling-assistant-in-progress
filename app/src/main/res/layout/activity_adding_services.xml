@@ -42,7 +42,7 @@
 
             <EditText
                 android:id="@+id/editText"
-                android:layout_width="150dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:ems="10"
@@ -63,26 +63,14 @@
 
             <EditText
                 android:id="@+id/editText2"
-                android:layout_width="150dp"
+                android:layout_width="120dp"
                 android:layout_height="45dp"
                 android:layout_marginStart="16dp"
                 android:ems="10"
                 android:hint="total distance"
-                android:inputType="numberSigned"
+                android:inputType="numberDecimal"
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
                 app:layout_constraintTop_toTopOf="@+id/imageView3" />
-
-            <Switch
-                android:id="@+id/switch1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="km/mil"
-                android:textOff="mil"
-                android:textOn="km"
-                app:layout_constraintStart_toEndOf="@+id/editText2"
-                app:layout_constraintTop_toTopOf="@+id/editText2" />
 
             <ImageView
                 android:id="@+id/imageView4"
@@ -102,7 +90,6 @@
                 android:ems="10"
                 android:hint="propulsion system repairs e.g. a chain exchange"
                 android:inputType="textMultiLine"
-                app:layout_constraintEnd_toEndOf="@+id/switch1"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
                 app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
@@ -212,7 +199,7 @@
                 android:layout_marginStart="16dp"
                 android:ems="10"
                 android:hint="total cost of service"
-                android:inputType="textPersonName"
+                android:inputType="numberDecimal"
                 app:layout_constraintEnd_toEndOf="@+id/editText7"
                 app:layout_constraintStart_toEndOf="@+id/imageView9"
                 app:layout_constraintTop_toTopOf="@+id/imageView9" />
@@ -228,6 +215,30 @@
                 app:layout_constraintEnd_toEndOf="@+id/editText8"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/editText8" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="9dp"
+                android:text="km"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/editText2"
+                app:layout_constraintTop_toTopOf="@+id/editText2" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="9dp"
+                android:text="PLN"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/editText8"
+                app:layout_constraintTop_toTopOf="@+id/editText8" />
 
 
         </android.support.constraint.ConstraintLayout>
