@@ -12,6 +12,7 @@
     <string name="textView6">WHEELS</string>
     <string name="textView7">OTHER</string>
     <string name="textView8">COST</string>
+    <string name="title_activity_updating_service">UpdatingService</string>
 
 
 </resources>

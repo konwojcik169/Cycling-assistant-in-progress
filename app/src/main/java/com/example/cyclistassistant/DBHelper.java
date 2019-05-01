@@ -66,4 +66,21 @@ public class DBHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME, "ID = ?", new String[] {id});
     }
+
+    public boolean updateData(String id, String date, String distance, String propulsion, String suspension, String brakes, String wheels, String other, String cost){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_2, date);
+        contentValues.put(COL_3, distance);
+        contentValues.put(COL_4, propulsion);
+        contentValues.put(COL_5, suspension);
+        contentValues.put(COL_6, brakes);
+        contentValues.put(COL_7, wheels);
+        contentValues.put(COL_8, other);
+        contentValues.put(COL_9, cost);
+        db.update(TABLE_NAME, contentValues, "id = ?", new String[] {id});
+        return true;
+    }
+
+
 }

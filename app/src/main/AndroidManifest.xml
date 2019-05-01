@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewingServices"></activity>
+        <activity android:name=".UpdatingServices"></activity>
+        <activity
+            android:name=".UpdatingService"
+            android:label="@string/title_activity_updating_service"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ViewingServices" />
         <activity android:name=".AddingServices" />
         <activity android:name=".MainActivity">
             <intent-filter>

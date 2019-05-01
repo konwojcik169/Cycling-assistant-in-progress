@@ -1,6 +1,7 @@
 package com.example.cyclistassistant;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,7 @@ public class ViewingServices extends Activity {
     DBHelper myDb;
 
     static int itemSelected;
+    static int itemSelectedUpdate;
     static boolean isSelected;
 
     int licznik;
@@ -104,6 +106,7 @@ public class ViewingServices extends Activity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         itemSelected = position;
+                        itemSelectedUpdate = position;
                         isSelected = true;
                         listView.setSelector(android.R.color.holo_orange_dark);
 //
@@ -145,6 +148,27 @@ public class ViewingServices extends Activity {
                     itemSelected = 0;
                     isSelected = false;
                     listView.setSelector(android.R.color.transparent);
+            }
+        });
+
+        b7_updateService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isSelected) {
+
+//                    TextView tv = listView.findViewById(R.id.textView);
+//                    String eDate = tv.getText().toString();
+
+                    Intent i = new Intent(ViewingServices.this, UpdatingServices.class);
+//                    i.putExtra("eDate", eDate);
+                    startActivity(i);
+                } else {
+                Toast.makeText(ViewingServices.this, "Select service to be updated",
+                        Toast.LENGTH_LONG).show();
+            }
+            itemSelected = 0;
+            isSelected = false;
+            listView.setSelector(android.R.color.transparent);
             }
         });
 
