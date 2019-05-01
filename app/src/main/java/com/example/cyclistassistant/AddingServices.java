@@ -1,6 +1,7 @@
 package com.example.cyclistassistant;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -65,6 +66,9 @@ public class AddingServices extends Activity  {
                         Toast.makeText(AddingServices.this, "Data not inserted",
                                 Toast.LENGTH_SHORT).show();
                     }
+
+                Intent i = new Intent(AddingServices.this, MainActivity.class);
+                startActivity(i);
 
             }
         });

@@ -13,10 +13,16 @@ public class MainActivity extends AppCompatActivity {
 
     Button b1, b2, b3, b5_view_all_data;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ViewingServices.itemSelectedUpdate = 0;
+        ViewingServices.itemSelected = 0;
+        ViewingServices.isSelected = false;
 
         myDb = new DBHelper(this);
 
@@ -34,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startActivity2(View v){
+        ViewingServices.itemSelected = 0;
+        ViewingServices.itemSelectedUpdate = 0;
+        ViewingServices.isSelected = false;
         Intent i = new Intent(this, ViewingServices.class);
         startActivity(i);
     }

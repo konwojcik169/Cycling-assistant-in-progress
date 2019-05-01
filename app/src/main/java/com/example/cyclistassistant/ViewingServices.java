@@ -108,7 +108,7 @@ public class ViewingServices extends Activity {
                         itemSelected = position;
                         itemSelectedUpdate = position;
                         isSelected = true;
-                        listView.setSelector(android.R.color.holo_orange_dark);
+                        listView.setSelector(android.R.color.darker_gray);
 //
 //                        if(position == 0) {
 //                            Toast.makeText(getApplicationContext(), "You chose Chuck Norris", Toast.LENGTH_LONG).show();
@@ -130,11 +130,27 @@ public class ViewingServices extends Activity {
                     sAdapter.notifyDataSetChanged();
                     TextView tv11 = listView.findViewById(R.id.textView11);
 
-                    Integer deletedRows = myDb.deleteRowOfDB(tv11.getText().toString());
+                    Cursor res = myDb.getAllData();
+                    String bId;
+
+                    res.moveToPosition(ViewingServices.itemSelectedUpdate);
+                    StringBuffer bufId = new StringBuffer();
+                    bufId.append(res.getString(0));
+                    bId = bufId.toString();
+
+                    bufId.append(res.getString(0));
+
+
+                    Integer deletedRows = myDb.deleteRowOfDB(bId);
 
                     if(deletedRows > 0){
                         Toast.makeText(ViewingServices.this, "Data deleted",
                                 Toast.LENGTH_SHORT).show();
+                        itemSelected = 0;
+                        isSelected = false;
+                        listView.setSelector(android.R.color.transparent);
+                        Intent i = new Intent(ViewingServices.this, MainActivity.class);
+                        startActivity(i);
                     }
                     else {
                         Toast.makeText(ViewingServices.this, "Data not deleted!!!" + tv11,
