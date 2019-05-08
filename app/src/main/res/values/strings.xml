@@ -3,6 +3,7 @@
     <string name="button">ADD NEW SERVICE</string>
     <string name="button2">VIEW YOUR SERVICES</string>
     <string name="button3">FIND THE BEST SERVICE</string>
+    <string name="button9">ABOUT BIKE MAINTENANCE</string>
 
     <string name="textView">DATE</string>
     <string name="textView2">DISTANCE</string>

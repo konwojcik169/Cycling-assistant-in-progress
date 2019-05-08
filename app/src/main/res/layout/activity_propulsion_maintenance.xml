@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PropulsionMaintenance"
+    android:background="#F1E48F"
+    >
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="wrap_content"
+        android:layout_height="200sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/chain_icon" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="         Keep the drivetrain clean and lubricated, you save loads of money. Do you get annoyed when someone rides past you with loud rattling and squeaking sound coming from the chain and sprockets?
+
+         \n         Maybe the sound is coming from your bike? That is the not-so-sweet sound of metal rubbing against metal and grime and mud, because all lubrication has long since worn off. That is a really good way to go, if you want to shorten the life expectancy of your chain and sprockets. It is not cheap to replace them, so save yourself some money by regularly cleaning and lubricating the drivetrain.
+
+        \n          You will need disposable rags, bike oil, some degreaser product and maybe a used toothbrush and a flat headed screwdriver to pry off the larger gunks from the rear derailleurs jockey wheels and chainrings. Get all the dirt you possibly can get off the chains, sprockets and chainwheels. After everything is nice and clean, turn the cranks slowly backwards and simultaneously apply a drop of bike oil on the inside of every link on your chain.
+
+        \n          The more often you clean and lube, the less time it takes every time you do it. Why not clean the frame and wheels while you’re at it?"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

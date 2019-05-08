@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1E48F"
+    tools:context=".SuspensionMaintenance">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="          The most important part of maintaining your suspension forks, is keeping the fork well lubricated. This means ensuring there is lubrication inside the fork, and that this lubricant isn't contaminated by dirt from the outside.
+
+            \n          Suspension forks use a unique oil-based lubrication system. The oil pools in the lower part of the fork legs, and from here it helps to lubricate the bushes and seals within the fork, allowing it to move smoothly and without friction.
+
+            \n          To keep the oil in, and the dirt out, suspension forks contain a number of seals.
+
+            \n          Firstly, there is the external dust seal; to help keep the muck out. This is then often complemented with an additional oil seal, and a foam ring, within the fork.
+
+            \n          (The foam ring retains oil beneath the seal, and also collects any particles of dirt that get inside the fork. Foam rings in Fox forks use a lubricant called Float Fluid - this fluid is also present in air sprung forks, to help lubricate the air piston).
+
+            \n          For the external seals to repel dirt effectively, and for the internal bushes to remain frictionless, they must both remain well lubricated. Many modern forks contain only 5 or 10ml of oil for lubrication; but this is all it needs to keep the system running smooth."
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="182dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="105dp"
+        android:src="@drawable/suspension_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

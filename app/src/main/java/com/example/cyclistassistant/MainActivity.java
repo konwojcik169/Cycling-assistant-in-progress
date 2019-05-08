@@ -11,7 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     DBHelper myDb;
 
-    Button b1, b2, b3, b5_view_all_data;
+    Button b1, b2, b3, b5_view_all_data, b9_about_maintenance;
 
 
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         b2 = findViewById(R.id.button2);
         b3 = findViewById(R.id.button3);
         b5_view_all_data = findViewById(R.id.button5);
-
+        b9_about_maintenance = findViewById(R.id.button9);
         viewAll();
     }
 
@@ -49,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void startActivity3(View v){
         Intent i = new Intent(this, MapsActivity.class);
+        startActivity(i);
+    }
+
+    public void startActivity4(View v){
+        Intent i = new Intent(this, AboutMaintenance.class);
         startActivity(i);
     }
 
