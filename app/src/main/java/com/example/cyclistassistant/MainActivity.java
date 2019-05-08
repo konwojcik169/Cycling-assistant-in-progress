@@ -47,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void startActivity3(View v){
+        Intent i = new Intent(this, MapsActivity.class);
+        startActivity(i);
+    }
+
         public void viewAll(){
         b5_view_all_data.setOnClickListener(new View.OnClickListener() {
             @Override

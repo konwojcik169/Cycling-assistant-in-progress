@@ -81,7 +81,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="find the nearest service" />
+        tools:text="find the nearest service"
+        android:onClick="startActivity3"
+        />
 
     <Button
         android:id="@+id/button5"
